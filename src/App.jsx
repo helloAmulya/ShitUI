@@ -7,12 +7,25 @@ import TextArea1 from "./components/Texts/TextArea1";
 import TextArea2 from "./components/Texts/TextArea2";
 import Swt1 from "./components/Switch/Swt1";
 import Swt2 from "./components/Switch/Swt2";
-
+import { Nav1 } from "./components/NavBar/Nav1";
 function App() {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
     <div className="flex h-screen bg-[#09090B]">
+      <Nav1
+        navItems={[
+          { name: "Home", link: "/", icon: "🏠" },
+          { name: "Docs", link: "/docs", icon: "📚" },
+          { name: "Blog", link: "/blog", icon: "📝" },
+        ]}
+        loginText="Sign In"
+        showLogin={true}
+        bgColor="bg-gray-100 dark:bg-zinc-900"
+        textColor="text-zinc-700 dark:text-zinc-100"
+        hoverTextColor="hover:text-zinc-900 dark:hover:text-zinc-300"
+      />
+
       <Sdb1
         borderColor="border-purple-200"
         hoverColor="hover:bg-[#54346B]"
